@@ -6,6 +6,9 @@
 
             /* GET BREADCRUMBS.php */
             if (function_exists('the_breadcrumb')) the_breadcrumb();
+
+            /* GET PRODUCT IMAGES FOR PRODUCT GALLERY */
+            $images = get_field('product_gallery');
         ?>
 
         <div class="container">
@@ -24,12 +27,20 @@
                             <div class="product-gallery">
                               <div class="swiper-container gallery-top" >
                                 <div class="swiper-wrapper" id="aniimated-thumbnials">
-                                    <a class="swiper-slide" href="<?php echo get_field('product_main_photo')['url']; ?>">
+                                <?php
+                                    if( $images ):
+                                    foreach( $images as $image ):
+                                ?>
+                                    <a class="swiper-slide" href="<?php echo $image['url']; ?>">
                                       <img
                                         class="swiper-slide-img"
-                                        src="<?php echo get_field('product_main_photo')['url']; ?>"
-                                        alt="<?php echo get_field('product_main_photo')['alt']; ?>">
+                                        src="<?php echo $image['url']; ?>"
+                                        alt="<?php echo $image['alt']; ?>">
                                     </a>
+                                <?php
+                                    endforeach;
+                                    endif;
+                                ?>
                                 </div>
 
                                 <!-- Add Arrows -->
@@ -39,7 +50,6 @@
                                 <div class="swiper-container gallery-thumbs">
                                   <div class="swiper-wrapper">
                                   <?php
-                                        $images = get_field('product_gallery');
                                         if( $images ):
                                         foreach( $images as $image ):
                                   ?>
@@ -133,7 +143,3 @@
         </div>
     </main>
 <?php get_footer(); ?>
-
-
-
-
