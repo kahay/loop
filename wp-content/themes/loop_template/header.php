@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Part of front end and backend (WordPress part) was created by kamilbartusik.pl -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Loop - Kasy Fiskalne, komputery POS, oprogramowanie do gastronomii</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
+    <meta name="author" content="Kamil Bartusik, Katarzyna Górska">
     <!-- favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -14,8 +15,6 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <?php wp_head(); ?>
-
-
     <!-- facebook -->
     <meta property="og:image:width" content="1099">
     <meta property="og:image:height" content="575">
@@ -23,9 +22,6 @@
     <meta property="og:description" content="Wdrażanie system&oacute;w wspierających sprzedaż i kontrolę magazyn&oacute;w/pracownik&oacute;w w restauracjach, pubach, kawiarniach. Sprzedaż urządzeń fiskalnych.">
     <meta property="og:image" content="https://pos-loop.pl/dist/images/og-image.jpg">
     <meta property="og:url" content="https://www.facebook.com/posloop/">
-	<!-- food icons -->
-	<!-- demo styles -->
-    <!-- slider -->
 
     <script type='application/ld+json'> 
         {

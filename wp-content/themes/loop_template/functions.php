@@ -134,6 +134,12 @@ function my_acf_op_init() {
       'menu_slug'   => 'theme-settings-footer',
       'parent_slug'	=> 'theme-settings',
     ));
+    acf_add_options_sub_page(array(
+      'page_title' 	=> 'Logotypy na stronie',
+      'menu_title'	=> 'Logotypy',
+      'menu_slug'   => 'theme-settings-logotype',
+      'parent_slug'	=> 'theme-settings',
+    ));
   }
 }
 

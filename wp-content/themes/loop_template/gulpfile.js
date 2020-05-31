@@ -25,7 +25,7 @@ gulp.task("sass", function() {
         compatibility: "ie8"
       })
     )
-    .pipe(gulp.dest("./wp-content/themes/loop_template/html_content/dist/css"));
+    .pipe(gulp.dest("./dist/css"));
 });
 
 gulp.task("debugJs", function() {
@@ -41,7 +41,7 @@ gulp.task("compressJs", function() {
     .src("./dev/js/**/*.js")
     .pipe(concat("all.min.js"))
     .pipe(uglify())
-    .pipe(gulp.dest("./wp-content/themes/loop_template/html_content/dist/js/"));
+    .pipe(gulp.dest("./dist/js/"));
 });
 
 gulp.task("watch", function() {
