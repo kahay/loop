@@ -5,11 +5,11 @@
 # filtrów WordPressa. Zmiany dokonane bezpośrednio tutaj będą nadpisywane.
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /loop_wordpress/
+RewriteBase /loop-master/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /loop_wordpress/index.php [L]
+RewriteRule . /loop-master/index.php [L]
 </IfModule>
 
 # END WordPress
