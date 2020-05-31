@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <img class="logo" src="<?php echo get_template_directory_uri(); ?>/dist/images/loop-logo-footer.svg" alt="logo">
+        <img class="logo" src="<?php echo get_field('logo_footer', 'options')['url']; ?>" alt="<?php echo get_field('logo_footer', 'options')['alt']; ?>">
       </div>
 
       <div class="col-md-4" >

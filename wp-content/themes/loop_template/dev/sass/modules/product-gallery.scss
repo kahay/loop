@@ -35,7 +35,7 @@
   .swiper-button-prev:after {
     content: '';
     position: absolute;
-    background-image: url('../images/chevron-left-solid.svg');
+    background-image: url('../images/icons/chevron-left-solid.svg');
     background-repeat: no-repeat;
     height: 24px;
     width: 15px;
@@ -45,7 +45,7 @@
   }
 
   .swiper-button-next:after {
-    background-image: url('../images/chevron-right-solid.svg');
+    background-image: url('../images/icons/chevron-right-solid.svg');
     left: calc(50% + 1px); 
 
   }
@@ -85,7 +85,7 @@
 .lg-actions .lg-next:before {
     content: "";
     position: absolute;
-    background-image: url('../images/chevron-left-solid.svg');
+    background-image: url('../images/icons/chevron-left-solid.svg');
     background-repeat: no-repeat;
     height: 31px;
     width: 20px;
@@ -98,7 +98,7 @@
 .lg-actions .lg-next {
   &:before {
     content: "";
-    background-image: url('../images/chevron-right-solid.svg');
+    background-image: url('../images/icons/chevron-right-solid.svg');
     left: calc(50% + 2px);
   }
 }

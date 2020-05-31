@@ -41,7 +41,7 @@
         "@type": "ComputerStore",
         "name": "Loop",
         "url": "http://pos-loop.pl/",
-        "logo": "http://pos-loop.pl/dist/images/logo.svg",
+        "logo": "<?php echo get_field('logo_desktop', 'options')['url']; ?>",
         "image": "http://pos-loop.pl/dist/images/k10_orange04.jpg",
         "description": "Kasy fiskalne, komputery POS, oprogramowanie do gastronomii, terminale płanicze, drukarki bonowe",
         "address": {

@@ -29,7 +29,7 @@
         "@type": "ComputerStore",
         "name": "Loop",
         "url": "http://pos-loop.pl/",
-        "logo": "http://pos-loop.pl/dist/images/logo.svg",
+        "logo": "<?php echo get_field('logo_desktop', 'options')['url']; ?>",
         "image": "http://pos-loop.pl/dist/images/k10_orange04.jpg",
         "description": "Kasy fiskalne, komputery POS, oprogramowanie do gastronomii, terminale płanicze, drukarki bonowe",
         "address": {
@@ -63,7 +63,7 @@
     <div class="container">
         <!-- Blueprint header -->
         <div class="top__bar">
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/loop_mobile.svg" alt="">
+            <img src="<?php echo get_field('logo_mobile', 'options')['url']; ?>" alt="<?php echo get_field('logo_mobile', 'options')['alt'] ?>">
             <button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
         </div>
             <nav id="ml-menu" class="menu">
@@ -122,7 +122,7 @@
     <!-- /view -->  
 <nav class="md-visible" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <a href="<?php echo get_home_url(); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/dist/images/logo.svg" alt="logo">
+        <img src="<?php echo get_field('logo_desktop', 'options')['url']; ?>" alt="<?php echo get_field('logo_desktop', 'options')['alt'] ?>">
     </a>
     <?php
         wp_nav_menu(
