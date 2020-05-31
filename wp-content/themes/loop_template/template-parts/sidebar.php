@@ -33,6 +33,6 @@
             </li>
           <?php } ?>
       </ul>
-      <nav>
-   </aside>
+  <nav>
+</aside>
 
