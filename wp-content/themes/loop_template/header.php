@@ -25,16 +25,8 @@
     <meta property="og:url" content="https://www.facebook.com/posloop/">
 	<!-- food icons -->
 	<!-- demo styles -->
-
-
-
-
-
     <!-- slider -->
 
-
-
-    
     <script type='application/ld+json'> 
         {
         "@context": "http://www.schema.org",
@@ -133,7 +125,7 @@
     </div>
     <!-- /view -->  
 <nav class="md-visible" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <a href="">
+    <a href="<?php echo get_home_url(); ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/dist/images/logo.svg" alt="logo">
     </a>
     <?php

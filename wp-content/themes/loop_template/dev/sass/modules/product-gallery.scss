@@ -1,0 +1,117 @@
+.product-gallery  {
+  .swiper-slide {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #aniimated-thumbnials {
+    .swiper-slide {
+      text-align: center;
+      .swiper-slide-img {
+        max-height: 100%;
+      }
+    }
+  }
+
+  .gallery-top {
+    height: 375px;
+  }
+
+  .swiper-button-next.swiper-button-white, 
+  .swiper-button-prev.swiper-button-white {
+    color: white;
+    font-size: 2px;
+    padding: 22px;
+    background-color: #ff3a24;
+    border-radius: 50px;
+    box-shadow: 2px 2px 14px rgba(0,0,0,.3);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .swiper-button-next:after, 
+  .swiper-button-prev:after {
+    content: '';
+    position: absolute;
+    background-image: url('../images/chevron-left-solid.svg');
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 15px;
+    top: 50%;
+    left: calc(50% - 1px); 
+    transform: translate(-50%,-50%);
+  }
+
+  .swiper-button-next:after {
+    background-image: url('../images/chevron-right-solid.svg');
+    left: calc(50% + 1px); 
+
+  }
+
+  .gallery-thumbs {
+    height: 85px;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  .gallery-thumbs .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+  .gallery-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+}
+
+.lg-outer .lg-thumb {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lg-backdrop  {
+  background-color: rgba(0,0,0,.34);
+}
+
+.lg-outer .lg-thumb-outer,
+.lg-sub-html, .lg-toolbar,
+.lg-actions .lg-next, .lg-actions .lg-prev,
+.lg-outer .lg-toggle-thumb {
+  background-color: rgba(28, 34, 80, 0.9);
+}
+
+.lg-actions .lg-prev:after,
+.lg-actions .lg-next:before {
+    content: "";
+    position: absolute;
+    background-image: url('../images/chevron-left-solid.svg');
+    background-repeat: no-repeat;
+    height: 31px;
+    width: 20px;
+    top: 50%;
+    left: calc(50% - 2px); 
+    transform: translate(-50%,-50%);
+}
+
+
+.lg-actions .lg-next {
+  &:before {
+    content: "";
+    background-image: url('../images/chevron-right-solid.svg');
+    left: calc(50% + 2px);
+  }
+}
+
+.lg-actions .lg-next, 
+.lg-actions .lg-prev {
+  padding: 28px;
+  border-radius: 50%;
+}
+
+.lg-toolbar .lg-icon, 
+.lg-actions .lg-next, .lg-actions .lg-prev,
+#lg-counter,
+.lg-outer .lg-toggle-thumb {
+  color: white;
+}

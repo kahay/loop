@@ -64,12 +64,16 @@
                             <span class="normal-price">
                                 <?php echo get_field('product_details')['discount']; ?>
                             </span>
+                            <?php
+                                $productDetailsParameters = get_field('product_details')['parameters'];
+                                if(strlen($productDetailsParameters) > 0) :
+                            ?>
                             <div class="product-indexes">
-                                <span class="product-indexes-title">Indeksy produktu:</span>
                                 <span>
-                                    <?php echo get_field('product_details')['parameters']; ?>
+                                    <?php echo $productDetailsParameters; ?>
                                 </span>
                             </div>
+                            <?php endif; ?>
                             <div class="product-rewards">
                               <?php
                                     $additionalImages = get_field('product_gallery');

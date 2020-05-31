@@ -30,15 +30,21 @@
         ?>
         <div class="col-md-4">
             <span class="title"><?php echo $footer_menu_title; ?></span>
-            <h2><a href="#">Kasy drukarki fiskalne online</a></h2>
-            <h2><a href="#">Kasy i drukarki fiskalne</a></h2>
-            <h2><a href="#">Urządzenia niefiskalne</a></h2>
-            <h2><a href="#">Terminale płatnicze</a><h2>
-            <h2><a href="#">Przywoływacz kelnerski</a></h2>
-            <h2><a href="#">Oprogramowanie</a></h2>
-            <h2><a href="#">Kontakt</a></h2>
-            <h2><a href="#">Polityka prywatności</a></h2>
-            <h2><a href="#">Polityka plików cookies</a></h2>
+            <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'footer_nav',
+                        'menu_id' => '',
+                        'container' => false,
+                        'menu_class' => '',
+                        'menu_id' => '',
+                        'before'          => '',
+                        'after'           => '',
+                        'link_before'     => '',
+                        'link_after'      => '',
+                    )
+                );
+            ?>
         </div>
         <?php 
             endif;

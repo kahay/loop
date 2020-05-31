@@ -13,7 +13,12 @@ function add_theme_assets() {
 
   wp_enqueue_script( 'jquery', get_template_directory_uri() . '/dist/js/jquery-3.4.1.min.js', array ( 'jquery' ), 1.1, true);
   wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/dist/js/modernizr-custom.js', array ( ), 1.1, true);
-  wp_enqueue_script( 'swiper', get_template_directory_uri() . '/dist/js/swiper.min.js', array ( ), 1.1, true);
+
+  if(is_home()){
+    wp_enqueue_script( 'swiper', get_template_directory_uri() . '/dist/js/swiper.min.js', array ( ), 1.1, true);
+  }
+
+
   wp_enqueue_script( 'lightgallery', get_template_directory_uri() . '/dist/js/lightgallery.min.js', array ( ), 1.1, true);
   wp_enqueue_script( 'all', get_template_directory_uri() . '/dist/js/all.min.js', array ( ), 1.1, true);
 
@@ -107,10 +112,6 @@ add_action('acf/init', 'my_acf_op_init');
 function my_acf_op_init() {
 
   if( function_exists('acf_add_options_page') ) {
-
-    acf_add_options_page();
-    acf_add_options_sub_page('Kategoria');
-    acf_add_options_sub_page('Footer');
 
     acf_add_options_page(array(
       'page_title' 	=> 'Główne ustawienia szablonu',
