@@ -27,7 +27,7 @@
                 />
             </div>
             <h3>
-                <?php ; ?>
+                <?php echo $postMeta['product_name'][0]; ?>
             </h3>
             <span class="price">
                  <?php echo $postMeta['product_details_price'][0]; ?>
