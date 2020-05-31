@@ -1,0 +1,21 @@
+footer {
+    background-color: $footer-bg;
+    color: white;
+    padding: 62px 0 59px;
+    .col-md-4 {
+    margin-bottom: 50px;
+    }
+    .logo {
+        margin-top: 31px;
+    }
+    .title {
+        font-family: 'Poppins-Bold';
+        font-size: 26px;
+        margin-bottom: 30px;
+        display: inline-block;
+    }
+    p, h2 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+}

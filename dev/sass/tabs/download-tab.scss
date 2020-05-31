@@ -1,0 +1,42 @@
+.download-tab {
+    padding: 15px;
+    color: $tab;
+    .download-row {
+        display: flex;
+        &:not(:last-of-type) {
+            border-bottom: 1px solid $input;
+        }
+        .img-wrapper {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            width: 10%;
+        }
+        .title {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            width: 70%;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+        .download-text {
+            font-family: "Poppins-Bold";
+            color: $brand-color;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            width: 20%;
+            text-align: center;
+            justify-content: center;
+        }
+        &:hover {
+            background-color: #F4F4F4;
+            .title {
+                color: $tab;
+                font-family: "Poppins-SemiBold";
+            }
+        }
+
+    }
+}

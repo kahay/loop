@@ -1,0 +1,5 @@
+@mixin btn-hover {
+    background-color: white;
+    color: $brand-color;
+    border: 3px solid $brand-color;
+}
