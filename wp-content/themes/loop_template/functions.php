@@ -295,9 +295,58 @@ function the_breadcrumb(){
     }
         echo '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="' . $categoryLink . '">' . '<span itemprop="name">' . $categoryName . '</span></a></li>';
     }
-    echo '<li class="active">' . get_field('product_name') . '</li></ol></nav></div></section>';
+    if(get_field('product_name')){
+        echo '<li class="active">';
+        echo the_field('product_name');
+        echo '</li></ol></nav></div></section>';
+    }else{
+        echo '</ol></nav></div></section>';
+    }
 }
+/*
+    REMOVE WPCF7 UNNECESARY ELEMS
+*/
+add_filter('wpcf7_form_elements', function( $content ) {
+  $dom = new DOMDocument();
+  $dom->preserveWhiteSpace = false;
+  $dom->loadHTML(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'), LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
 
+  $xpath = new DomXPath($dom);
+  $spans = $xpath->query("//span[contains(@class, 'wpcf7-form-control-wrap')]" );
+
+  foreach ( $spans as $span ) :
+    $children = $span->firstChild;
+    $span->parentNode->replaceChild( $children, $span );
+  endforeach;
+
+  return $dom->saveHTML();
+});
+/*
+    ADD CUSTOM ATTRIBS TO WPCF7
+*/
+add_filter( 'wpcf7_form_elements', 'customizeAttribuesForWCF7' );
+
+function customizeAttribuesForWCF7( $content ) {
+    $inputName = strpos( $content, 'name="imie"' );
+    $content = substr_replace( $content, ' required="" ', $inputName, 0 );
+
+    $inputSurname = strpos( $content, 'name="nazwisko"' );
+    $content = substr_replace( $content, ' required="" ', $inputSurname, 0 );
+
+    $inputCompany = strpos( $content, 'name="firma"' );
+    $content = substr_replace( $content, ' required="" ', $inputCompany, 0 );
+
+    $inputTown = strpos( $content, 'name="miasto"' );
+    $content = substr_replace( $content, ' required="" ', $inputTown, 0 );
+
+    $inputPhone = strpos( $content, 'name="telefon"' );
+    $content = substr_replace( $content, ' required="" ', $inputPhone, 0 );
+
+    $inputMessage = strpos( $content, 'name="wiadomosc"' );
+    $content = substr_replace( $content, ' required="" ', $inputMessage, 0 );
+
+    return $content;
+}
 /*
   COMING SOON...
 */

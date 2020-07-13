@@ -1,4 +1,4 @@
-<?php 
+<?php
   /* Template Name: Kontakt */
   get_header();
 ?>
@@ -6,20 +6,49 @@
 <!-- GET MAP.php -->
 <?php get_template_part('template-parts/map'); ?>
 
-<main class="contact-page">
-  <div class="container">
-    <p class="superheader">Kontakt</p>
-    <p class="header">Skontaktuj się!</p>
-    <div class="row">
-      <div class="col-md-6">
-          <!-- GET CONTACT-FORM.php -->
-          <?php get_template_part('template-parts/contact', 'form'); ?>
-        </div> 
-        <div class="offset-md-1 col-md-5">
-          <!-- GET CONTACT-DATA.php -->
-          <?php get_template_part('template-parts/contact', 'data'); ?>
-      </div>
+<section class="home-contact-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="superheader">
+                    <?php echo get_field('heading_1'); ?>
+                </p>
+                <p class="header">
+                    <?php echo get_field('heading_2'); ?>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <div class="contact-form">
+                    <?php echo do_shortcode('[contact-form-7 id="256" title="Contact form 1"]'); ?>
+                </div>
+            </div>
+            <div class="offset-md-1 col-md-5">
+                <div class="contact-data">
+                    <p class="header-contact">Telefon</p>
+                    <p class="text-contact"><?php echo get_field('phone'); ?></p>
+                </div>
+
+                <div class="contact-data">
+                    <p class="header-contact">Email</p>
+                    <p class="text-contact"><?php echo get_field('email') ?></p>
+                </div>
+
+                <div class="contact-data">
+                    <p class="header-contact">Adres</p>
+                    <div class="text-contact">
+                        <?php echo get_field('address'); ?>
+                    </div>
+                </div>
+
+                <div class="contact-data">
+                    <p class="header-contact">Social media</p>
+                    <div class="text-contact">
+                        <?php echo the_field('social_media'); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</main>
+</section>
+
 <?php get_footer(); ?>

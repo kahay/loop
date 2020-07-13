@@ -37,9 +37,9 @@
           margin-bottom: 30px;
         }
         input:-webkit-autofill,
-        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:hover,
         input:-webkit-autofill:focus
-        input:-webkit-autofill, 
+        input:-webkit-autofill,
         textarea:-webkit-autofill,
         textarea:-webkit-autofill:hover
         textarea:-webkit-autofill:focus,
@@ -49,7 +49,7 @@
         -webkit-text-fill-color: $dark-text;
         -webkit-box-shadow: 0 0 0px 1000px white inset;
         }
-  
+
         textarea {
           height: 190px;
           margin: 10px 0;
@@ -117,4 +117,3 @@
       }
     }
 }
-  
