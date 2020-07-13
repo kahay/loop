@@ -23,7 +23,7 @@
             </div>
     <?php
         else :
-            echo 'TODO: Block not found';
+            echo 'TODO: 404 - Block not found';
         endif;
     ?>
 </div>

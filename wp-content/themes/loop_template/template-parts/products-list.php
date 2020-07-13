@@ -13,10 +13,11 @@
                 'cat' => $currentCatId
             )
         );
-        while ( $loop->have_posts() ) : $loop->the_post();
-        $ID = get_the_ID();
-        $prodImageId = get_post_meta( $ID, 'product_main_photo', true);
-        $postMeta = get_post_meta( $ID );
+        if($loop->have_posts() ){
+            while ( $loop->have_posts() ) : $loop->the_post();
+            $ID = get_the_ID();
+            $prodImageId = get_post_meta( $ID, 'product_main_photo', true);
+            $postMeta = get_post_meta( $ID );
     ?>
     <div class="col-sm-4">
         <a href="<?php echo the_permalink(); ?>" class="item">
@@ -46,6 +47,10 @@
     </div>
     <?php
         endwhile;
+        }else{
+            echo 'Brak produktow';
+        }
+
         wp_reset_postdata();
     ?>
     </div>

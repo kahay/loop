@@ -12,7 +12,7 @@
         setup_postdata(204);
         echo esc_attr(htmlentities(the_content()));
     } else {
-        echo "TODO: 404";
+        echo "TODO: 404 - Brak produktow o takiej kategorii.";
     };
 wp_reset_postdata();
 get_footer();
