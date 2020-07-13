@@ -343,7 +343,7 @@ function customizeAttribuesForWCF7( $content ) {
     $content = substr_replace( $content, ' required="" ', $inputPhone, 0 );
 
     $inputEmail = strpos( $content, 'name="email"' );
-    $content = substr_replace( $content, ' required="" ', $inputPhone, 0 );
+    $content = substr_replace( $content, ' required="" ', $inputEmail, 0 );
 
     $inputMessage = strpos( $content, 'name="wiadomosc"' );
     $content = substr_replace( $content, ' required="" ', $inputMessage, 0 );
