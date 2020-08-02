@@ -1,7 +1,7 @@
 <section class="background-text">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="offset-md-2 col-md-8">
                 <span class="superheader">
                     <?php echo the_field('heading_1'); ?>
                 </span>

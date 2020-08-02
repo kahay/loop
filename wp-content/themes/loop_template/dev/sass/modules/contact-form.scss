@@ -1,7 +1,7 @@
 .contact-form {
     form {
 
-      .inputs-text-wrapper input,
+      .inputs-text-wrapper input:not([type="submit"]),
       textarea {
         width: 100%;
         border: none;
@@ -17,16 +17,16 @@
       .inputs-text-wrapper {
         input:focus ~ label,
         textarea:focus ~ label,
-        input:valid ~ label,
+        input:valid ~ label:not([for="rules-checkbox"]),
         textarea:valid ~ label,
         input:-webkit-autofill ~ label,
         textarea:-webkit-autofill ~ label {
-          top: -12px;
-          left: 15px;
+          top: -12px !important;
+          left: 15px !important;
         }
         input:focus
         textarea:focus,
-        input:valid {
+        input:valid:not([type="submit"]) {
           border-bottom: 1px solid $brand-color;
         }
         textarea:valid {
@@ -61,7 +61,7 @@
         .textarea-label {
           top: 20px;
         }
-        div label {
+        div label:not([for="rules-checkbox"]) {
           position: absolute;
           top: 10px;
           left: 20px;
