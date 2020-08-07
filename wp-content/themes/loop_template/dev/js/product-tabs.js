@@ -1,4 +1,6 @@
-class TabController {
+var myEle = document.getElementById("#tab-example");
+if(myEle){
+  class TabController {
     constructor(container) {
       this.container = document.querySelector(container);
       this.tablist = this.container.querySelector('[role=tablist]');
@@ -72,4 +74,5 @@ class TabController {
   }
   
   const tabController = new TabController('#tab-example');
+}
   

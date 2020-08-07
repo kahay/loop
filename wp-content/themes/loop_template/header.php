@@ -22,6 +22,8 @@
     <meta property="og:description" content="Wdrażanie system&oacute;w wspierających sprzedaż i kontrolę magazyn&oacute;w/pracownik&oacute;w w restauracjach, pubach, kawiarniach. Sprzedaż urządzeń fiskalnych.">
     <meta property="og:image" content="https://pos-loop.pl/dist/images/og-image.jpg">
     <meta property="og:url" content="https://www.facebook.com/posloop/">
+    <script src="http://pos-loop.pl/wp-content/themes/loop_template/dist/js/modernizr-custom.js"></script>
+    <script src="http://pos-loop.pl/wp-content/themes/loop_template/dist/js/main.js"></script>
 
     <script type='application/ld+json'> 
         {
