@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Loop - Kasy Fiskalne, komputery POS, oprogramowanie do gastronomii</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/images/browser/apple-touch-icon.png">
     <meta name="author" content="Kamil Bartusik, Katarzyna Górska">
     <!-- favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/images/browser/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/images/browser/favicon-16x16.png">
+    <link rel="manifest" href="<?php echo get_home_url(); ?>/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <?php wp_head(); ?>
@@ -20,10 +20,10 @@
     <meta property="og:image:height" content="575">
     <meta property="og:title" content="Loop - kasy fiskalne, komputery POS, oprogramowanie do gastronomii, terminale płanicze, drukarki bonowe">
     <meta property="og:description" content="Wdrażanie system&oacute;w wspierających sprzedaż i kontrolę magazyn&oacute;w/pracownik&oacute;w w restauracjach, pubach, kawiarniach. Sprzedaż urządzeń fiskalnych.">
-    <meta property="og:image" content="https://pos-loop.pl/dist/images/og-image.jpg">
+    <meta property="og:image" content="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/images/browser/og-image.jpg">
     <meta property="og:url" content="https://www.facebook.com/posloop/">
-    <script src="http://pos-loop.pl/wp-content/themes/loop_template/dist/js/modernizr-custom.js"></script>
-    <script src="http://pos-loop.pl/wp-content/themes/loop_template/dist/js/main.js"></script>
+    <script src="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/js/modernizr-custom.js"></script>
+    <script src="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/js/main.js"></script>
 
     <script type='application/ld+json'> 
         {

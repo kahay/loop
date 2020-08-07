@@ -8,7 +8,7 @@ footer {
     .logo {
         margin-top: 31px;
     }
-    .title {
+    .title, .title p {
         font-family: 'Poppins-Bold';
         font-size: 26px;
         margin-bottom: 30px;
@@ -18,13 +18,5 @@ footer {
         font-size: 16px;
         margin-bottom: 5px;
     }
-    ul {
-        padding-left: 0;
-        li {
-            text-indent: 0px;
-            &:before {
-                display: none;
-            }
-        }
-    }
+    @include delete-circle;
 }

@@ -135,6 +135,11 @@
 .menu__item {
 	display: block;
 	width: calc(100% - 50px);
+	text-indent: 0;
+}
+
+.menu__item:before {
+	display: none;
 }
 
 .menu__link {
