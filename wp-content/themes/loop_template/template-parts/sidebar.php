@@ -14,14 +14,21 @@
                 <h1>
                     <?php echo esc_html( $category->name ); ?>
                  </h1>
+
+                 <?php 
+                 
+                 $subCategories = get_categories( array(
+                    'orderby' => 'name',
+                    'parent'  => $category->term_id,
+                    'hide_empty' => true,
+                    'exclude' => 1
+                ) );
+                 
+                 if($subCategories) : ?>             
+
                  <ul class="items">
                      <?php
-                         $subCategories = get_categories( array(
-                               'orderby' => 'name',
-                               'parent'  => $category->term_id,
-                               'hide_empty' => true,
-                               'exclude' => 1
-                           ) );
+
                          foreach ( $subCategories as $subCategory ) { ?>
                              <li>
                                 <a href="<?php echo get_category_link($subCategory->term_id); ?>">
@@ -30,6 +37,7 @@
                              </li>
                      <?php } ?>
                  </ul>
+                 <?php endif; ?>
             </li>
           <?php } ?>
       </ul>
