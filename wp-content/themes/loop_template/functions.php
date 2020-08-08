@@ -6,9 +6,9 @@
 
 function add_theme_assets() {
   wp_enqueue_style( 'organic-icons', get_template_directory_uri(). '/dist/css/organicfoodicons.css');
+  wp_enqueue_style( 'light-gallery', get_template_directory_uri(). '/dist/css/lightgallery.min.css');
   wp_enqueue_style( 'component', get_template_directory_uri(). '/dist/css/component.css');
   wp_enqueue_style( 'style', get_template_directory_uri(). '/dist/css/all.min.css');
-  wp_enqueue_style( 'light-gallery', get_template_directory_uri(). '/dist/css/lightgallery.min.css');
   wp_enqueue_style( 'swipper', get_template_directory_uri(). '/dist/css/swiper.min.css');
 
   wp_enqueue_script( 'jquery', get_template_directory_uri() . '/dist/js/jquery-3.4.1.min.js', array ( 'jquery' ), 1.1, true);
