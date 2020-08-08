@@ -11,18 +11,20 @@
 
           foreach ( $categories as $category ) { ?>
             <li class="list">
-                <h1>
-                    <?php echo esc_html( $category->name ); ?>
-                 </h1>
 
-                 <?php 
-                 
+            <?php 
                  $subCategories = get_categories( array(
                     'orderby' => 'name',
                     'parent'  => $category->term_id,
                     'hide_empty' => true,
                     'exclude' => 1
                 ) );
+            ?>
+                <h1 <?php if($subCategories) { echo 'class="arrow"'; } ?>>
+                    <?php echo esc_html( $category->name ); ?>
+                 </h1>
+
+                 <?php 
                  
                  if($subCategories) : ?>             
 
