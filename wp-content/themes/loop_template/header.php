@@ -80,6 +80,24 @@
                     <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Przywoływacz kelnerski</a></li>
                     <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Oprogramowanie</a></li>
                     <li class="menu__item" role="menuitem"><a class="menu__link" href="/contact.php">Kontakt</a></li>
+                    <?php
+                        $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+                                                                    // This returns an array of menu locations ([LOCATION_NAME] = MENU_ID);
+
+                         $menuID = $menuLocations['main_nav']; // Get the *primary* menu ID
+
+                         $primaryNav = wp_get_nav_menu_items($menuID); // Get the array of wp objects, the nav items for our queried location.
+                          foreach ( $primaryNav as $navItem ) {
+                                  
+                              if($navItem->post_parent === 0){ ?>
+                                <li class="menu__item" role="menuitem">
+                                    <a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="<?php echo $navItem->url; ?>">
+                                        <?php echo $navItem->title ?>
+                                    </a>
+                                </li>
+                              <?php }
+                          }
+                    ?>
 
                 </ul>
                 <!-- Submenu 1 -->
