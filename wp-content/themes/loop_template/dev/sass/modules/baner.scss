@@ -6,6 +6,7 @@
     padding: 10px 50px;
     display: flex;
     align-items: flex-end;
+    margin-bottom: 50px;
     h2 {
         font-family: 'Poppins-Bold';
         font-size: 24px;
@@ -20,5 +21,19 @@
         font-weight: bold;
         font-family: 'Poppins-Bold';
     }
-    margin-bottom: 50px;
+    h1 { 
+        font-size: 25px; 
+    }
+    @media (min-width: 320px) {
+        h1 { 
+            font-size: calc( 3.82vw + 12.766px ); 
+        }
+    }
+
+    @media (min-width: 960px) {
+        h1 { 
+            font-size: 65px; 
+        }
+    }
+    
 }

@@ -15,3 +15,26 @@
 //     }
 //   }
 
+#mapid {
+  height: 500px;
+  margin-bottom: 50px;
+  .leaflet-pane {
+    z-index: 1;
+  }
+  #maps-window {
+    font-family: "Poppins-Regular";
+    h1 {
+      margin-bottom: 4px;
+      color: $brand-color;
+      font-size: 16px;
+    }
+    p {
+      font-size: 13px;
+      line-height: 28px;
+      margin: 0;
+    }
+  }
+  // .header {
+  //   margin-bottom: 100px;
+  // }
+}

@@ -57,7 +57,10 @@
     <!-- <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmwQrDUfWlp8dEKU8PNAwpwa7PLPKzlCc&callback=initMap">
     </script> -->
-    
+    <!-- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script> -->
   <?php wp_footer(); ?>
+
   </body>
 </html>

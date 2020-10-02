@@ -46,14 +46,20 @@
             
         }
     
-        h1 { font-size: 25px; }
+        h1 { 
+            font-size: 25px; 
+        }
     
         @media (min-width: 320px) {
-        h1 { font-size: calc( 3.82vw + 12.766px ); }
+            h1 { 
+                font-size: calc( 3.82vw + 12.766px ); 
+            }
         }
     
         @media (min-width: 960px) {
-        h1 { font-size: 65px; }
+            h1 { 
+                font-size: 65px; 
+            }
         }
     }
 }
