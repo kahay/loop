@@ -2,7 +2,7 @@ footer {
     background-color: $footer-bg;
     color: white;
     padding: 62px 0 59px;
-    .col-md-4 {
+    .col-lg-4 {
     margin-bottom: 50px;
     }
     .logo {
@@ -17,6 +17,81 @@ footer {
     p, h2 {
         font-size: 16px;
         margin-bottom: 5px;
+        line-height: 1.875;
     }
     @include delete-circle;
 }
+
+@media(max-width: 1200px) {
+    footer {
+        .col-lg-4 {
+        }
+        .logo {
+            max-width: 260px;
+        }
+        .title, .title p {
+        }
+        p, h2 {
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    footer {
+        padding: 50px 0;
+        .col-lg-4 {
+            margin-bottom: 37px;
+        }
+        .logo {
+            max-width: 170px;
+            display: block;
+            margin: 0 auto;
+        }
+        .title, .title p {
+            font-size: 21px;
+            margin-bottom: 24px;
+        }
+        p, h2 {
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+    }
+}
+
+
+@media(max-width: 767px) {
+    footer {
+        padding: 60px 0;
+        .col-lg-4 {
+            margin-bottom: 40px;
+        }
+        .logo {
+        }
+        .title, .title p {
+            font-size: 21px;
+            margin-bottom: 13px;
+        }
+        p, h2 {
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    footer {
+        padding: 40px 0;
+        .col-lg-4 {
+            margin-bottom: 25px;
+        }
+        .logo {
+            max-width: 160px;
+            margin-bottom: 10px;
+
+        }
+        .title, .title p {
+            font-size: 18px;
+        }
+        p, h2 {
+        }
+    }
+}
+

@@ -34,3 +34,24 @@
     }
     margin-bottom: 20px;
 }
+
+@media(max-width: 768px) {
+    .testimonials {
+        .item {
+            padding: 21px 15px 20px;
+            .circle {
+                width: 68px;
+                height: 68px;
+            }
+            h4 {
+                font-family: 'Poppins-Bold';
+                margin-bottom: 17px;
+            }
+            p {
+                // font-size: 14px;
+                line-height: 1.9;
+            }
+        }
+        margin-bottom: 0px;
+    }
+}

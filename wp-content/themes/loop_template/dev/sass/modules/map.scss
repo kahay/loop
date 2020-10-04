@@ -38,3 +38,27 @@
   //   margin-bottom: 100px;
   // }
 }
+
+@media (max-width: 768px) {
+  #mapid {
+    height: 400px;
+    margin-bottom: 30px;
+    #maps-window {
+      .leaflet-popup-content {
+        margin: 10px 10px;
+      }
+      h1 {
+      }
+      p {
+        font-size: 12px;
+        line-height: 23px;
+      }
+    }
+  }
+}
+
+@media(max-width: 640px) {
+  #mapid {
+    margin-top: 50px;
+  }
+}

@@ -1,12 +1,38 @@
 .contact-data {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
+  .header-contact {
+    font-size: 28px;
+    font-family: "Poppins-Bold";
+    color: $header-color;
+    margin-bottom: 2px;
+    line-height: normal;
+  }
+  .text-contact {
+    color: $text-color;
+  }
+}
+
+// @media(max-width: 768px) {
+//     .contact-data .header-contact {
+//       line-height: normal;
+//     }
+//   }
+
+@media (max-width: 768px) {
+    .contact-data {
+      margin-bottom: 36px;
+      .header-contact {
+        font-size: 21px;
+        margin-bottom: 1px;
+      }
+    }
+  }
+
+@media (max-width: 480px) {
+  .contact-data {
+    margin-bottom: 27px;
     .header-contact {
-        font-size: 28px;
-        font-family: "Poppins-Bold";
-        color: $header-color;
-        margin-bottom: 2px;
+      font-size: 18px;
     }
-    .text-contact {
-        color: $text-color;
-    }
+  }
 }

@@ -1,36 +1,108 @@
 .photo-text {
-    margin-bottom: 10px;
-    .row {
-        display: flex;
-        align-items: center;
-        .col-md-6 {
-            margin-bottom: 50px;
-            a {
-                &:hover {
-                    .btn {
-                        @include btn-hover;
-                    }
-                }
-            }
+  margin-bottom: 55px;
+  .row {
+    display: flex;
+    align-items: center;
+    .col-md-6 {
+      margin-bottom: 50px;
+      a {
+        &:hover {
+          .btn {
+            @include btn-hover;
+          }
         }
-        .superheader, .header {
-            text-align: left;
-        }
-        p {
-            color: $text-color;
-            margin-bottom: 30px;
-        }
+      }
+    }
+    .superheader,
+    .header {
+      text-align: left;
+    }
+    p {
+      color: $text-color;
+      margin-bottom: 30px;
+    }
 
-        figure {
-            text-align: center;
-        }
-        &:nth-child(even) {
-            .col-md-6 {
-            &:first-child {
-                order: 2;
-            }
-        }
+    figure {
+      text-align: center;
     }
+
     padding-top: 30px;
-    }
+  }
 }
+
+@media (min-width: 1200px) {
+  .photo-text {
+    .row {
+      figure {
+        img {
+          max-height: 525px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .photo-text {
+    margin-bottom: 50px;
+    .row {
+      figure {
+        img {
+          max-height: 320px;
+        }
+      }
+    }
+    &.img-right {
+      .row {
+        .col-lg-6 {
+          &:first-child {
+            order: 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+    .photo-text {
+        .row {
+          figure {
+            img {
+              max-height: 200px;
+            }
+          }
+        }
+      }
+  }
+  
+
+// @media (min-width: 1200px) {
+//   .photo-text {
+//     .row {
+//       .col-md-6 {
+//         a {
+//           &:hover {
+//             .btn {
+//             }
+//           }
+//         }
+//       }
+//       .superheader,
+//       .header {
+//       }
+//       p {
+//       }
+
+//       figure {
+//       }
+//       &:nth-child(even) {
+//         .col-md-6 {
+//           &:first-child {
+//             order: 2;
+//           }
+//         }
+//       }
+//       padding-top: 30px;
+//     }
+//   }
+// }

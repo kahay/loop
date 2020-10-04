@@ -6,7 +6,7 @@
                     <?php
                         while ( have_rows('about_company_section') ) : the_row();
                     ?>
-                         <div class="col-md-4 item">
+                         <div class="col-lg-4 item">
                            <div class="circle">
                                 <img src="<?php echo the_sub_field('icon'); ?>">
                            </div>
@@ -25,10 +25,3 @@
 ?>
 </section>
 
-
-
- <div class="circle">
-                                <img src="<?php echo the_sub_field('icon'); ?>">
-                            </div>
-                            <h4><?php the_sub_field('heading'); ?></h4>
-                            <?php the_sub_field('content'); ?>

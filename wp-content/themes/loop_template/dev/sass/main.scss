@@ -41,4 +41,12 @@ body {
   }
 }
 
+@media(max-width: 768px) {
+  body {
+    p {
+      font-size: 13px;
+      line-height: 2.1;
+    }
+  }
+}
 

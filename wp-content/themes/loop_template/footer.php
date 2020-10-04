@@ -7,13 +7,13 @@
 <footer itemscope itemtype="http://schema.org/WPFooter">
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-lg-4 col-12">
         <img class="logo" src="<?php echo get_field('logo_footer', 'options')['url']; ?>" alt="<?php echo get_field('logo_footer', 'options')['alt']; ?>">
       </div>
 
-      <div class="col-md-4" >
+      <div class="col-lg-4 col-md-6 col-12" >
         <span class="title">
-            <p><?php echo $infoArr['address']['address_heading']; ?></p>
+            <?php echo $infoArr['address']['address_heading']; ?>
         </span>
         <div>
             <?php echo $infoArr['address']['address_text']; ?>
@@ -28,7 +28,7 @@
             if($displayFooterMenu) :
             $footer_menu_title = get_field('footer_menu_title', 'options');
         ?>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-12">
             <span class="title"><?php echo $footer_menu_title; ?></span>
             <?php
                 wp_nav_menu(
@@ -38,8 +38,8 @@
                         'container' => false,
                         'menu_class' => '',
                         'menu_id' => '',
-                        'before'          => '',
-                        'after'           => '',
+                        'before'          => '<h2>',
+                        'after'           => '</h2>',
                         'link_before'     => '',
                         'link_after'      => '',
                     )

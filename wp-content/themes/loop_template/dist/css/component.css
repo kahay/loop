@@ -36,6 +36,7 @@
 
 .top__bar {
 	position: fixed;
+	top: 0;
 	z-index: 1000;
 	display: none;
 	background-color: rgba(28, 34, 80, 0.9);

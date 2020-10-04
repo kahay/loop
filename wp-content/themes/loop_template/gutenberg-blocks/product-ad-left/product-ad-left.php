@@ -13,7 +13,7 @@
 <section class="photo-text">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <figure>
                         <img
                             src="<?php echo get_field('product_main_photo', $prodId)['url']; ?>"
@@ -21,18 +21,18 @@
                     </figure>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <h2 class="superheader">
                         <a href="<?php echo get_category_link( $prodCategoryId ); ?>">
                             <?php echo esc_attr(htmlentities(get_cat_name($prodCategoryId))); ?>
                         </a>
                     </h2>
                     <h3 class="header"><?php echo get_field('product_name', $prodId); ?></h3>
-                    <p><?php if($isCustomDesc){
+                    <?php if($isCustomDesc){
                               echo $customDesc;
                             }else{
                               echo get_field('product_description', $prodId);
-                            } ?></p>
+                            } ?>
                     <span class="btn btn-big">
                         <a href="<?php echo get_post_permalink($prod->ID);?>">
                             zobacz
