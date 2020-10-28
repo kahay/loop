@@ -81,24 +81,39 @@
                     <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Oprogramowanie</a></li>
                     <li class="menu__item" role="menuitem"><a class="menu__link" href="/contact.php">Kontakt</a></li>
                     <?php
-                        $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
-                                                                    // This returns an array of menu locations ([LOCATION_NAME] = MENU_ID);
+                        $menuLocations = get_nav_menu_locations();
+                        $menuID = $menuLocations['main_nav'];
+                        $primaryNav = wp_get_nav_menu_items($menuID);
 
-                         $menuID = $menuLocations['main_nav']; // Get the *primary* menu ID
+                        $parentElementObjectIDs = array();
 
-                         $primaryNav = wp_get_nav_menu_items($menuID); // Get the array of wp objects, the nav items for our queried location.
-                          foreach ( $primaryNav as $navItem ) {
-                                  
-                              if($navItem->post_parent === 0){ ?>
-                                <li class="menu__item" role="menuitem">
-                                    <a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="<?php echo $navItem->url; ?>">
-                                        <?php echo $navItem->title ?>
-                                    </a>
-                                </li>
-                              <?php }
-                          }
-                    ?>
+                        foreach ( $primaryNav as $navItem ) {
 
+
+
+                          if($navItem->post_parent === 0){ ?>
+                            <?php array_push($parentElementObjectIDs, $navItem->object_id); ?>
+                            <li class="menu__item" role="menuitem">
+                                <a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="<?php echo $navItem->url; ?>">
+                                    <?php
+                                        echo $navItem->title;
+                                     ?>
+                                </a>
+                            </li>
+                          <?php }
+
+                        }
+                        ?>
+                        <?php var_dump($parentElementObjectIDs); ?>
+                        <?php
+                            foreach($parentElementObjectIDs as $parentID){
+                                foreach($primaryNav as $navItem) {
+                                    if($navItem->post_parent == $parentID){
+                                        echo $navItem->title;
+                                    }
+                                }
+                            }
+                        ?>
                 </ul>
                 <!-- Submenu 1 -->
                 <ul data-menu="submenu-1" id="submenu-1" class="menu__level" tabindex="-1" role="menu" aria-label="Vegetables">
