@@ -73,79 +73,35 @@
 
             <div class="menu__wrap">
                 <ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
-                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="#">Kasy i drukarki fiskalne ONLINE</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="#">Kasy i drukarki fiskalne</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="#">Urządzenia niefiskalne</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Terminale płatnicze</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Przywoływacz kelnerski</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Oprogramowanie</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="/contact.php">Kontakt</a></li>
                     <?php
                         $menuLocations = get_nav_menu_locations();
                         $menuID = $menuLocations['main_nav'];
                         $primaryNav = wp_get_nav_menu_items($menuID);
-
                         $parentElementObjectIDs = array();
 
                         foreach ( $primaryNav as $navItem ) {
-
-
-
                           if($navItem->post_parent === 0){ ?>
                             <?php array_push($parentElementObjectIDs, $navItem->object_id); ?>
                             <li class="menu__item" role="menuitem">
-                                <a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="<?php echo $navItem->url; ?>">
+                                <a class="menu__link" data-submenu="submenu-<?php echo $navItem->object_id ?>" aria-owns="submenu-<?php echo $navItem->object_id ?>" href="<?php echo $navItem->url; ?>">
                                     <?php
                                         echo $navItem->title;
                                      ?>
                                 </a>
                             </li>
                           <?php }
-
                         }
-                        ?>
-                        <?php var_dump($parentElementObjectIDs); ?>
-                        <?php
-                            foreach($parentElementObjectIDs as $parentID){
-                                foreach($primaryNav as $navItem) {
-                                    if($navItem->post_parent == $parentID){
-                                        echo $navItem->title;
-                                    }
+                            foreach($parentElementObjectIDs as $parentID){ ?>
+                            <ul data-menu="submenu-<?php echo $parentID; ?>" id="submenu-<?php echo $parentID; ?>" class="menu__level" tabindex="-1" role="menu">
+                                <?php foreach($primaryNav as $navItem) {
+                                    if($navItem->post_parent == $parentID){ ?>
+                                        <li class="menu__item" role="menuitem"><a class="menu__link" href="#"><?php echo $navItem->title; ?></a></li>
+                                <?php    }
                                 }
-                            }
+                            ?>
+                            </ul>
+                            <?php }
                         ?>
-                </ul>
-                <!-- Submenu 1 -->
-                <ul data-menu="submenu-1" id="submenu-1" class="menu__level" tabindex="-1" role="menu" aria-label="Vegetables">
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Kasy mobilne ONLINE</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Kasy małe ONLINE</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Kasy średnie ONLINE</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Kasy specjalizowane ONLINE</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Drukarki sklepowe ONLINE</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Drukarki apteczne ONLINE</a></li>
-
-                </ul>
-                <!-- Submenu 2 -->
-                <ul data-menu="submenu-2" id="submenu-2" class="menu__level" tabindex="-1" role="menu" aria-label="Fruits">
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Kasy mobilne</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Kasy małe</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Kasy średnie</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Kasy systemowe</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Kasy specjalizowane</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Drukarki mobilne</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Drukarki sklepowe</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Drukarki apteczne</a></li>
-                </ul>
-
-                <!-- Submenu 3 -->
-                <ul data-menu="submenu-3" id="submenu-3" class="menu__level" tabindex="-1" role="menu" aria-label="Grains">
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Pos i programy</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Kody kreskowe</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wagi elektroniczne</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Szufldy</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Drukarki paragonowe</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Materiały eksploatacyjne</a></li>
-                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Akcesoria</a></li>
                 </ul>
             </div>
         </nav>
