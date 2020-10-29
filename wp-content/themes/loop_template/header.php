@@ -83,15 +83,16 @@
                           if($navItem->post_parent === 0){ ?>
                             <?php array_push($parentElementObjectIDs, $navItem->object_id); ?>
                             <li class="menu__item" role="menuitem">
-                                <a class="menu__link" data-submenu="submenu-<?php echo $navItem->object_id ?>" aria-owns="submenu-<?php echo $navItem->object_id ?>" href="<?php echo $navItem->url; ?>">
+                                <a class="menu__link" data-submenu="submenu-<?php echo $navItem->object_idl==; ?>" aria-owns="submenu-<?php echo $navItem->object_id; ?>" href="<?php echo $navItem->url; ?>">
                                     <?php
                                         echo $navItem->title;
                                      ?>
                                 </a>
                             </li>
                           <?php }
-                        }
-                            foreach($parentElementObjectIDs as $parentID){ ?>
+                        }?>
+                </ul>
+                           <?php foreach($parentElementObjectIDs as $parentID){ ?>
                             <ul data-menu="submenu-<?php echo $parentID; ?>" id="submenu-<?php echo $parentID; ?>" class="menu__level" tabindex="-1" role="menu">
                                 <?php foreach($primaryNav as $navItem) {
                                     if($navItem->post_parent == $parentID){ ?>
@@ -102,7 +103,7 @@
                             </ul>
                             <?php }
                         ?>
-                </ul>
+
             </div>
         </nav>
         <!-- <div class="content">
