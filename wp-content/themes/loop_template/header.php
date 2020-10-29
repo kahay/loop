@@ -83,7 +83,7 @@
                           if($navItem->post_parent === 0){ ?>
                             <?php array_push($parentElementObjectIDs, $navItem->object_id); ?>
                             <li class="menu__item" role="menuitem">
-                                <a class="menu__link" data-submenu="submenu-<?php echo $navItem->object_id==; ?>" aria-owns="submenu-<?php echo $navItem->object_id; ?>" href="<?php echo $navItem->url; ?>">
+                                <a class="menu__link" data-submenu="submenu-<?php echo $navItem->object_id; ?>" aria-owns="submenu-<?php echo $navItem->object_id; ?>" href="<?php echo $navItem->url; ?>">
                                     <?php
                                         echo $navItem->title;
                                      ?>
