@@ -11,7 +11,7 @@
     <!-- favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/images/browser/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/images/browser/favicon-16x16.png">
-    <link rel="manifest" href="<?php echo get_home_url(); ?>/site.webmanifest">
+    <link rel="manifest" href="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/site.webmanifest">
 
     <link rel="stylesheet" href="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/css/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="

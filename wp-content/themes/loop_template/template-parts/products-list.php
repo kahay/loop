@@ -19,7 +19,7 @@
             $prodImageId = get_post_meta( $ID, 'product_main_photo', true);
             $postMeta = get_post_meta( $ID );
     ?>
-    <div class="col-sm-4">
+    <div class="col-lg-4 col-md-6 col-sm-6">
         <a href="<?php echo the_permalink(); ?>" class="item">
             <div class="img-wrapper">
                 <img
