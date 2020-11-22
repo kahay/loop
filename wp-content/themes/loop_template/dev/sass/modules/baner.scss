@@ -9,31 +9,22 @@
     margin-bottom: 50px;
     h2 {
         font-family: 'Poppins-Bold';
-        font-size: 24px;
+        @include fluid-type(320px,1920px,14px,24px);
+        color: white;
         text-transform: uppercase;
         letter-spacing: 0.08em;
-        color: white;
     }
     h1 {
+        font-family: 'Poppins-Bold';
+        @include fluid-type(320px,1920px,19px,65px);
         color: white;
-        font-size: 65px;
         letter-spacing: 0.07em;
         font-weight: bold;
-        font-family: 'Poppins-Bold';
-    }
-    h1 { 
-        font-size: 25px; 
-    }
-    @media (min-width: 320px) {
-        h1 { 
-            font-size: calc( 3.82vw + 12.766px ); 
-        }
-    }
+    } 
+}
 
-    @media (min-width: 960px) {
-        h1 { 
-            font-size: 65px; 
-        }
+@media (max-width: 1200px) {
+    .baner {
+        padding: 20px 15px
     }
-    
 }

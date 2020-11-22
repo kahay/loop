@@ -13,9 +13,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/images/browser/favicon-16x16.png">
     <link rel="manifest" href="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/site.webmanifest">
 
-    <link rel="stylesheet" href="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/css/leaflet.css"
-   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-   crossorigin=""/>
+    <link rel="stylesheet" href="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/css/leaflet.css">
 
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -72,7 +70,9 @@
     <div class="container">
         <!-- Blueprint header -->
         <div class="top__bar">
-            <img src="<?php echo get_field('logo_mobile', 'options')['url']; ?>" alt="<?php echo get_field('logo_mobile', 'options')['alt'] ?>">
+             <a href="<?php echo get_home_url(); ?>">
+                <img src="<?php echo get_field('logo_mobile', 'options')['url']; ?>" alt="<?php echo get_field('logo_mobile', 'options')['alt'] ?>">
+            </a>
             <button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
         </div>
             <nav id="ml-menu" class="menu">

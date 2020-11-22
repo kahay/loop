@@ -1,6 +1,15 @@
 .contact-page {
-    padding-bottom: 50px;
+    padding-bottom: 80px;
     .header {
-        margin-bottom: 100px;
+        margin-bottom: 90px;
     }
+}
+
+@media(max-width: 1200px) {
+    .contact-page {
+        padding-bottom: 50px;
+        .header {
+            margin-bottom: 50px;
+        }
+    }  
 }

@@ -8,7 +8,9 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-12">
-        <img class="logo" src="<?php echo get_field('logo_footer', 'options')['url']; ?>" alt="<?php echo get_field('logo_footer', 'options')['alt']; ?>">
+        <a href="<?php echo get_home_url(); ?>">
+          <img class="logo" src="<?php echo get_field('logo_footer', 'options')['url']; ?>" alt="<?php echo get_field('logo_footer', 'options')['alt']; ?>">
+        </a>
       </div>
 
       <div class="col-lg-4 col-md-6 col-12" >
