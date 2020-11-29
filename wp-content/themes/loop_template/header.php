@@ -106,7 +106,7 @@
                             <ul data-menu="submenu-<?php echo $parentID; ?>" id="submenu-<?php echo $parentID; ?>" class="menu__level" tabindex="-1" role="menu">
                                 <?php foreach($primaryNav as $navItem) {
                                     if($navItem->post_parent == $parentID){ ?>
-                                        <li class="menu__item" role="menuitem"><a class="menu__link" href="#"><?php echo $navItem->title; ?></a></li>
+                                        <li class="menu__item" role="menuitem"><a class="menu__link" href="<?php echo $navItem->url; ?>"><?php echo $navItem->title; ?></a></li>
                                 <?php    }
                                 }
                             ?>

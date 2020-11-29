@@ -1,4 +1,3 @@
-
 <div class="category-list">
     <div class="container">
         <div class="row">
@@ -11,4 +10,3 @@
         </div>
     </div>
 </div>
-

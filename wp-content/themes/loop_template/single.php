@@ -86,11 +86,11 @@
                             <?php endif; ?>
                             <div class="product-rewards">
                               <?php
-                                    $additionalImages = get_field('product_gallery');
+                                    $additionalImages = get_field('product_details')['additional_images'];
                                     if( $additionalImages ):
                                     foreach( $additionalImages as $image ):
                               ?>
-                                     <img src="<?php echo $image['url']; ?>">
+                                     <img src="<?php echo $image['image']; ?>">
                               <?php
                                     endforeach;
                                     endif;
