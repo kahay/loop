@@ -13,8 +13,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/images/browser/favicon-16x16.png">
     <link rel="manifest" href="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/site.webmanifest">
 
-    <link rel="stylesheet" href="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/css/leaflet.css">
-
+    <link rel="stylesheet" href="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/css/leaflet.css"
+   integrity=""
+   crossorigin=""/>
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <?php wp_head(); ?>
@@ -26,7 +27,9 @@
     <meta property="og:image" content="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/images/browser/og-image.jpg">
     <meta property="og:url" content="https://www.facebook.com/posloop/">
     <script src="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/js/modernizr-custom.js"></script>
-    <script src="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/js/leaflet.js"></script>
+    <script src="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/js/leaflet.js"
+  integrity=""
+  crossorigin=""></script>
     
     <script src="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/js/main.js"></script>
 
