@@ -20,7 +20,7 @@
                     <p class="text-up">Ups.. Strona nie istnieje!</p>
                     <p>Strona nie istnieje, bądź została usunięta<br>
                         Spróbuj powrócić na stronę główną.</p>
-                    <a href="<?php echo get_template_directory_uri(); ?>" class="btn btn-big">wróć na stronę główną</a>
+                    <a href="<?php echo get_home_url(); ?>" class="btn btn-big">wróć na stronę główną</a>
                 </div>
             </div>
         </div>
