@@ -1,4 +1,4 @@
-var myEle = document.getElementById("#tab-example");
+var myEle = document.getElementById("tab-example");
 if(myEle){
   class TabController {
     constructor(container) {
