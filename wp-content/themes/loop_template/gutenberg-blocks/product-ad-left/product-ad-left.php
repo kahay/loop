@@ -27,17 +27,17 @@
                             <?php echo esc_attr(htmlentities(get_cat_name($prodCategoryId))); ?>
                         </a>
                     </h2>
-                    <h3 class="header"><?php echo get_field('product_name', $prodId); ?></h3>
-                    <?php if($isCustomDesc){
-                              echo $customDesc;
-                            }else{
-                              echo get_field('product_description', $prodId);
-                            } ?>
-                    <span class="btn btn-big">
-                        <a href="<?php echo get_post_permalink($prod->ID);?>">
-                            zobacz
-                        </a>
-                    </span>
+                    <a href="<?php echo get_post_permalink($prod->ID);?>">
+                        <h3 class="header"><?php echo get_field('product_name', $prodId); ?></h3>
+                        <?php if($isCustomDesc){
+                                echo $customDesc;
+                                }else{
+                                echo get_field('product_description', $prodId);
+                                } ?>
+                            <span class="btn btn-big">
+                                zobacz
+                        </span>
+                    </a>
                 </div>
 
             </div>
