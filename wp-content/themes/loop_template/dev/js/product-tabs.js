@@ -10,9 +10,19 @@ if(myEle){
   
       this._addEventListeners();
     }
+
+
+
   
     // Private function to set event listeners
     _addEventListeners() {
+
+      for (let tab of this.tabs) {
+        if (this.tabs[0]) { 
+          this.setActiveTab(this.tabs[0].getAttribute('aria-controls'));
+        }
+      }
+
       for (let tab of this.tabs) {
         tab.addEventListener('click', e => {
           e.preventDefault();
