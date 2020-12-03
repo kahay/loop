@@ -50,3 +50,11 @@
   }
 }
   
+
+@media(max-width: 992px) {
+  .tab-container {
+    .tablist {
+      flex-wrap: wrap;
+    }
+  }
+}

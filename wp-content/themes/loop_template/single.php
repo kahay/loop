@@ -13,10 +13,10 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 d-none d-xl-block">
                     <?php get_template_part('template', 'parts/sidebar'); ?>
                 </div>
-                <div class="col-md-9">
+                <div class="col-xl-9 col-12">
                     <div class="row product-gallery-description">
                         <div class="col-md-12">
                             <h3 class="product-name">
@@ -99,7 +99,8 @@
                         </section>
                     </div>
                     </div>
-                        <div class="col-md-12">
+                    <div class="row">
+                    <div class="col-md-12">
                             <div id="tab-example" class="tab-container">
                               <ul class="tablist" aria-controls="tab-example" role="tablist">
                                 <?php
@@ -137,6 +138,8 @@
                               </main>
                             </div>
                         </div>
+                    </div>
+
                     </div>
                 </div>
             </div>

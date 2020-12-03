@@ -40,3 +40,37 @@
 
     }
 }
+
+@media(max-width: 767px) {
+    .download-tab {
+        // padding: 15px 0;
+        .download-row {
+            &:not(:last-of-type) {
+            }
+            .img-wrapper {
+                width: auto;
+                padding: 15px 10px;
+                img {
+                    max-width: none;
+                    width: 20px;
+                }
+            }
+            .title {
+                font-size: 13px;
+                padding: 15px 10px;
+                width: auto;
+            }
+            .download-text {
+                display: none;
+            }
+            &:hover {
+ 
+                .title {
+   
+                }
+            }
+    
+        }
+    }
+
+}

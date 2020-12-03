@@ -35,3 +35,33 @@
         margin: 0 15px 15px;
     }
 }
+
+@media(max-width: 767px) {
+    .tech-data-tab {
+        padding: 0 0px 15px;
+        .table {
+            .table-header {
+                padding: 25px 15px;
+            }
+            .table-row  {
+                font-size: 12px;
+                &:nth-child(even) {
+                }
+            }
+            .table-row {
+                .table-subheader {
+                    text-transform: none;
+                    font-weight: bold;
+                    padding: 10px 10px 10px 15px;
+                    width: 50%;
+                }
+                .table-paragraph {
+                    width: 50%;
+                }
+            }
+        }
+        img {
+        }
+    }
+
+}

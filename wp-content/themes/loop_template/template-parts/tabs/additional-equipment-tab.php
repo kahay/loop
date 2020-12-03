@@ -8,7 +8,7 @@
                 foreach($additionalEquipmentTabsProducts as $product):
                 $productId = $product->ID;
             ?>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-6 col-sm-6">
                 <a href="<?php echo get_post_permalink($productId); ?>" class="item">
                     <div class="img-wrapper">
                         <img src="<?php echo get_field('product_main_photo', $productId)['url']; ?>" alt="<?php echo get_field('product_main_photo', $productId)['alt']; ?>">
