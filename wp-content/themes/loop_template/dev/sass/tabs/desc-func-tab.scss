@@ -1,38 +1,69 @@
 .desc-func-tab {
-    padding: 30px 15px;
-    font-size: 14px;
-    line-height: 24px;
-    b {
-      font-family: Poppins-Bold;
-    }
-    blockquote {
-      font-style: italic;
-      font-weight: 500;
+  padding: 30px 15px;
+  font-size: 14px;
+  line-height: 24px;
+  p {
+    word-wrap: break-word;
+  }
+  b {
+    font-family: Poppins-Bold;
+  }
+  blockquote {
+    font-style: italic;
+    font-weight: 500;
+    font-family: "Poppins-Medium";
+    line-height: 30px;
+    position: relative;
+    margin: 20px;
+    &:before,
+    &:after {
+      content: "„";
+      display: block;
+      text-align: center;
+      color: $brand-color;
+      font-size: 220px;
+      position: absolute;
+      line-height: 0;
+      opacity: 0.15;
       font-family: "Poppins-Medium";
-      line-height: 30px;
-      position: relative;
-      margin: 20px;
-      &:before,
-      &:after {
-          content: "„";
-          display: block;
-          text-align: center;
-          color: $brand-color;
-          font-size: 220px;
-          position: absolute;
-          line-height: 0;
-          opacity: 0.15;
-          font-family: "Poppins-Medium";
-      }
-      &:before{
-          left: 5px;
-          top: -63px;
-      }
-  
-      &:after {
-          right: 5px;
-          bottom: 93px;
-      }
+    }
+    &:before {
+      left: 5px;
+      top: -63px;
+    }
+
+    &:after {
+      right: 5px;
+      bottom: 93px;
+    }
   }
 }
 
+@media (max-width: 767px) {
+  .desc-func-tab {
+    padding: 15px;
+    p {
+      font-size: 12px;
+      line-height: 2.16;
+    }
+    b {
+    }
+    blockquote {
+      margin: 15px 0;
+      &:before,
+      &:after {
+        font-size: 135px;
+        font-family: 'Poppins-Regular';
+      }
+      &:before {
+        left: -5px;
+        top: -41px;
+      }
+
+      &:after {
+        right: -5px;
+        bottom: 65px;
+      }
+    }
+  }
+}

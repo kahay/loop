@@ -52,3 +52,54 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    .support-programs-tab {
+        padding: 30px 15px 15px;
+        .table-header-row {
+            display: flex;
+            background-color: #F4F4F4;
+            .table-header {
+                font-size: 16px;
+                font-family: "Poppins-Bold";
+                padding: 15px;
+            }
+            .program-name-header {
+                width: 35%;
+                border-bottom: 1px solid $input;
+            }
+            .company-name-header {
+                width: 30%;
+                border-bottom: 1px solid $input;
+            }
+            .company-adress-header {
+                width: 35%;
+                border-bottom: 1px solid $input;
+            }
+        }
+        .table-row {
+            display: flex;
+            color: $tab;
+            .program-name {
+                width: auto;
+                padding: 10px 15px;
+                display: flex;
+                align-items: center;        
+            }
+            .company-name {
+                width: auto;
+                padding: 10px 15px;
+            }
+            .company-adress {
+                width: auto;
+                padding: 10px 15px;
+            }
+            &:not(:last-of-type) {
+            }
+            &:hover {
+                .company-name {
+                }
+            }
+        }
+    }
+}

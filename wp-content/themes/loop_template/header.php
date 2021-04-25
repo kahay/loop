@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/css/leaflet.css"
    integrity=""
    crossorigin=""/>
+
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <?php wp_head(); ?>
@@ -30,7 +31,6 @@
     <script src="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/js/leaflet.js"
   integrity=""
   crossorigin=""></script>
-    
     <script src="<?php echo get_home_url(); ?>/wp-content/themes/loop_template/dist/js/main.js"></script>
 
     <script type='application/ld+json'> 
