@@ -1,121 +1,46 @@
-ul.sidebar-category {
-  margin-bottom: 50px;
-  padding-left: 0px;
-
-  li {
-    text-indent: 0;
-    &:before {
-      display: none;
-    }
-    a {
-      display: block;
-    }
-  }
-  .list {
-    position: relative;
-    vertical-align: sub;
-    clear: both;
-    margin-bottom: 13px;
-    overflow: auto;
-    h1 {
-      font-family: "Poppins-SemiBold";
-      font-size: 15px;
-      line-height: 21px;
-      text-transform: uppercase;
-      cursor: pointer;
-      color: $category;
-      margin-bottom: 10px;
-      position: relative;
-      padding-right: 20px;
-      &.arrow {
-        &:after {
-          content: "";
-          position: absolute;
-          background-image: url("../images/icons/chevron-down-solid.svg");
-          background-repeat: no-repeat;
-          height: 13px;
-          width: 11px;
-          right: 0px;
-          top: calc(50% - 6px);
-          padding: 0px 5px;
-          transform: translateX(-50%);
-        }
-        &:hover {
-          transition: 300ms all;
-          color: $brand-color;
-          &:after {
-            background-image: url("../images/icons/chevron-down-solid-orange.svg");
-          }
-        }
-      }
-    }
-
-    .items {
-      // max-height: 0px;
-      // overflow: hidden;
-      // transition-timing-function: cubic-bezier(.075,.82,.165,1);
-      // transition: all .2s;
-      // transition: max-height 0.15s ease-out;
-      height: 0;
-      overflow: hidden;
-      padding: 0;
-      a {
-        padding: 10px;
-        font-size: 13px;
-      }
-    }
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-  .active {
-    h1 {
-      &.arrow {
-        &:after {
-          right: 0px;
-          top: calc(50% - 5px);
-          padding: 0px 5px;
-          transform: translateX(-50%) rotate(180deg);
-        }
-      }
-      &:hover {
-        transition: 300ms all;
-        color: $brand-color;
-      }
-    }
-
-    > .items {
-      display: block;
-      height: auto;
-      overflow: visible;
-    }
-  }
-}
-
-
 .metismenu {
   margin-bottom: 50px;
   padding-left: 0;
-  li {
-    position: relative;
-    vertical-align: sub;
-    clear: both;
-    margin-bottom: 13px;
-    overflow: auto;
-    text-indent: 0;
-    &:before {
-      display: none;
-    }
-    h1 {
+  ul {
+    padding-left: 0;
+  }
+  > li > a {
+    margin-bottom: 10px;
+    display: block;
+    > h1 {
       font-family: Poppins-SemiBold;
       font-size: 15px;
       line-height: 21px;
       text-transform: uppercase;
       cursor: pointer;
       color: $category;
-      margin-bottom: 10px;
       position: relative;
       padding-right: 20px;
+    }
+  }
+  li {
+    position: relative;
+    vertical-align: sub;
+    clear: both;
+    overflow: auto;
+    text-indent: 0;
+    &:before {
+      display: none;
+    }
+    a {
+      &:hover * {
+        color: $brand-color;
+      }
+    }
+  }
+  
+  .list {
+    margin-bottom: 13px;
+    .items {
+      h1 {
+        padding: 10px;
+        font-size: 13px;
+      }
     }
   }
 }
